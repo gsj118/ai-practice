@@ -2,12 +2,14 @@
 
 「인공지능활용실습」 강의에서 제작한 프로젝트의 제출용 코드와 문서입니다. 아래 프로젝트 이름을 선택하면 주요 화면, 기능, 실행 방법, AI 활용 과정과 검증 기록을 확인할 수 있습니다.
 
+**[Focusday v1.5 자동화 바로 체험하기](https://gsj118.github.io/focusday/?demo=1)** — 설치·가입 없이, 입력한 할 일에서 오늘의 다음 행동까지 확인할 수 있습니다.
+
 ## 프로젝트
 
 | 프로젝트 | 주요 내용 | 실행·시연 | 제출 버전 |
 |---|---|---|---|
 | [손글씨 인식 프로그램](%EC%86%90%EA%B8%80%EC%94%A8%20%EC%9D%B8%EC%8B%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/) | 직접 그린 0~9 한 자리 숫자를 MNIST CNN으로 인식합니다. | [로컬 실행 방법](%EC%86%90%EA%B8%80%EC%94%A8%20%EC%9D%B8%EC%8B%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/README.md#installation) · [실행 화면](%EC%86%90%EA%B8%80%EC%94%A8%20%EC%9D%B8%EC%8B%9D%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8/docs/final_v1_2.png) | v1.2 |
-| [개인용 할 일 관리 애플리케이션](%EA%B0%9C%EC%9D%B8%EC%9A%A9%20%ED%95%A0%20%EC%9D%BC%20%EA%B4%80%EB%A6%AC%20%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98/) | Focusday: 오늘 할 일 선택, 완료·복구, JSON 백업을 지원합니다. | [공개 앱 사용하기](https://gsj118.github.io/focusday/) · [로컬 실행 방법](%EA%B0%9C%EC%9D%B8%EC%9A%A9%20%ED%95%A0%20%EC%9D%BC%20%EA%B4%80%EB%A6%AC%20%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98/README.md#실행과-검증) | v1.4.0 |
+| [개인용 할 일 관리 애플리케이션](%EA%B0%9C%EC%9D%B8%EC%9A%A9%20%ED%95%A0%20%EC%9D%BC%20%EA%B4%80%EB%A6%AC%20%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98/) | Focusday: 입력 인식 → 오늘 목록 자동 구성 → 지금 할 하나를 연결합니다. | [자동화 체험](https://gsj118.github.io/focusday/?demo=1) · [개인용 앱](https://gsj118.github.io/focusday/) · [로컬 실행 방법](%EA%B0%9C%EC%9D%B8%EC%9A%A9%20%ED%95%A0%20%EC%9D%BC%20%EA%B4%80%EB%A6%AC%20%EC%95%A0%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98/README.md#실행과-검증) | v1.5.0 |
 | 추가 프로젝트 | 준비 중 | 완성 후 같은 위치에 추가합니다. | — |
 
 손글씨 인식 프로그램은 Python·PyTorch·Flask로 실행하는 로컬 웹 앱입니다. Focusday는 React·TypeScript 기반 웹 앱으로, 공개 주소에서 설치 없이 사용할 수 있습니다. 두 프로젝트의 실행 환경과 의존성은 각각 독립적입니다.
@@ -43,7 +45,7 @@ ai-practice/
 | 프로젝트 | 원본 저장소 | 가져온 커밋 |
 |---|---|---|
 | 손글씨 인식 프로그램 | [handwritten-digit-recognition](https://github.com/gsj118/handwritten-digit-recognition) | [`b5d6736`](https://github.com/gsj118/handwritten-digit-recognition/commit/b5d67361f70f511e8d81de71ca4a89b557363122) |
-| 개인용 할 일 관리 애플리케이션 | [focusday](https://github.com/gsj118/focusday) | [`b28a577`](https://github.com/gsj118/focusday/commit/b28a5771afdf9c897029600b983aaf23b05559bf) |
+| 개인용 할 일 관리 애플리케이션 | [focusday](https://github.com/gsj118/focusday) | [`790e040`](https://github.com/gsj118/focusday/commit/790e040429978eefa314fdfa8a4117bb81d3ed8c) |
 
 개발과 Focusday 공개 배포는 기존 저장소에서 유지합니다. 이 저장소는 제출 시점의 코드 모음이며 자동 동기화하거나 배포하지 않습니다. 제출본을 갱신할 때는 해당 프로젝트 코드와 위 기준 커밋을 함께 갱신합니다.
 
@@ -51,7 +53,17 @@ Focusday의 `docs/versions/` 안에 있는 `*.snapshot.md`는 과거 문서 원�
 
 실행에 필요한 모델·소스·테스트·문서는 포함하고, 설치된 패키지·가상환경·캐시·빌드 결과·MNIST 원본 데이터는 제외했습니다. 설치와 검사는 각 프로젝트 폴더에서 해당 README를 따라 실행합니다.
 
-## 통합 후 확인
+## v1.5 갱신 확인 · 2026-11-20
+
+개인용 할 일 관리 애플리케이션을 v1.5.0으로 갱신했습니다. README는 자동화의 사용 흐름, 직접 누르는 체험 링크와 실제 공개 화면을 중심으로 정리했습니다.
+
+- 제출본의 프로젝트 파일 1064개를 원본과 바이트 단위로 대조해 일치했습니다. README만 제출 경로·과제 모음 링크를 안내하도록 조정했으며 원본 배포용 `.github`는 기존처럼 제외합니다.
+- 한글·공백이 포함된 제출 폴더에서 `pnpm check` 통과: 타입·lint·단위 79개·서울/뉴욕 각각 55개·production build.
+- 같은 제출 폴더에서 새 방문 자동 계획과 체험의 개인 저장소 보존 E2E 2개를 실행해 통과했습니다. 원본 저장소는 루트/Pages 경로 각각 117개 및 원격 CI/Pages 검사를 완료했습니다.
+- 손글씨 인식 프로그램 26개 파일의 SHA-256이 변경 전과 일치합니다. 모델·소스·문서·README를 수정하지 않았고 이번에 재학습이나 재검사를 했다고 주장하지 않습니다.
+- [v1.5 공개 배포와 검증 근거](https://github.com/gsj118/focusday/tree/v1.5.0/docs/evidence/v1.5).
+
+## 최초 통합 확인 · 2026-11-19
 
 2026-11-19 KST, Windows의 위 한글·공백 폴더 경로에서 확인했습니다. 아래는 이번 통합 후 실행한 검사이며, 프로젝트 문서에 보존한 과거 검증 기록과 구분합니다.
 
